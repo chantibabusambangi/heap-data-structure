@@ -1,7 +1,7 @@
       **Time complexity.**
 1.insert an element into heap.
-  first we append the element into the heap array, and then heapify up all way to root(check heapify_up method in python file)
-  this takes atmost 'h' operations(swaps)  where h=height of heap
+  first we append the element into the heap array, and then heapify up all way to root,to restore heap property.(check heapify_up method in python file)
+  this takes atmost 'h' operations(swaps)  where h=height of root of the heap
   tc=O(h)=O(logn) as it was complete tree heigght h= log(n), where n=no.of nodes in the tree
 2.delete
   we can only delete the root in the heap.
@@ -16,8 +16,8 @@
   think off like this, heapify_down takes logn operations , and we running this for n//2 nodes
   so tc=n//2*logn =nlogn but this is not the case
   if you see, root takes 'h' swaps atmost, and root children can take 'h'-1 swaps atmost.
-  we cant tell every node takes atmost one operation.
-  each node can go a depth of its height.
+  we can't tell every node takes atmost one operation.
+  each node can go atmost a depth of its height.
   no.of nodes at ht=h is one node(root)
   no.of nodes at ht=h-1 is two nodes(root's left and right)
   no.of nodes at ht=h-2 is 2**2 =4 (level 3)
