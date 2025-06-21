@@ -18,12 +18,12 @@
   if you see, root takes 'h' swaps atmost, and root children can take 'h'-1 swaps atmost.
   we can't tell every node takes atmost one operation.
   each node can go atmost a depth of its height.
-  no.of nodes at ht=h is one node(root)
-  no.of nodes at ht=h-1 is two nodes(root's left and right)
-  no.of nodes at ht=h-2 is 2**2 =4 (level 3)
-  no.of nodes at ht=h-3 is 2**3 =8
-  no.of nodes at ht=h-k is 2**k
-  tc=1*h+2*(h-1)+2**2(h-2)+2**3(h-3)+...2**k(h-k)   (for leaf node k=h)
+  no.of nodes at ht=h is one node(root) , so total operations=1*(h)
+  no.of nodes at ht=h-1 is two nodes(root's left and right) , so total operations=2*(h-2)
+  no.of nodes at ht=h-2 is 2^2 =4 (level 3) , so total operations=(2^2)*(h-2)
+  no.of nodes at ht=h-3 is 2^3 =8 , so total operations=(2^3)*(h-3)
+  no.of nodes at ht=h-k is 2^k
+  tc=1*h+2^1*(h-1)+2^2(h-2)+2^3(h-3)+...2^k(h-k)   (for leaf node k=h)
   
     h
   = ∑ (2^k)*(h-k)
