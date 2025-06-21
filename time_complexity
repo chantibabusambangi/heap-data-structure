@@ -1,0 +1,35 @@
+      **Time complexity.**
+1.insert an element into heap.
+  first we append the element into the heap array, and then heapify up all way to root(check heapify_up method in python file)
+  this takes atmost 'h' operations(swaps)  where h=height of heap
+  tc=O(h)=O(logn) as it was complete tree heigght h= log(n), where n=no.of nodes in the tree
+2.delete
+  we can only delete the root in the heap.
+  so we replace root with last element(arr[-1).,and  we pop last element.
+  and use heapify_down (this includes pruning which makes tc=O(logn)
+  ex.root is there a,b are its children. if root>a and root>b we stop.else
+  say if a>b and a>root so we swap root value with its left node(a) value. and heapify(left) and we dont disturb right sub tree(prune this)
+  again this takes 'h' operations atmost.
+  tc=O(logn)
+3.heapify
+  we heapify down the array, for all internal nodes.(for i in range(len(arr)//2-1,-1,-1): heapify_down(i))
+  think off like this, heapify_down takes logn operations , and we running this for n//2 nodes
+  so tc=n//2*logn =nlogn but this is not the case
+  if you see, root takes 'h' swaps atmost, and root children can take 'h'-1 swaps atmost.
+  we cant tell every node takes atmost one operation.
+  each node can go a depth of its height.
+  no.of nodes at ht=h is one node(root)
+  no.of nodes at ht=h-1 is two nodes(root's left and right)
+  no.of nodes at ht=h-2 is 2**2 =4 (level 3)
+  no.of nodes at ht=h-3 is 2**3 =8
+  no.of nodes at ht=h-k is 2**k
+  tc=1*h+2*(h-1)+2**2(h-2)+2**3(h-3)+...2**k(h-k)   (for leaf node k=h)
+  
+    h
+  = ∑ (2^k)*(h-k)
+  ​ k=0
+  2^k was dominant factor,but as k increase h-k shrinks overall.
+  this ≈2^(h+1)≈n
+  therefore TC=O(n)
+
+
