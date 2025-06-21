@@ -1,6 +1,4 @@
 # heap-data-structure
-all about heap
-
 1.**two types of heaps**-> 1.max heap and min heap
 
   **max heap**-> the parent node value is greater than or equal to its children's node values.
