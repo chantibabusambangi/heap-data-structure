@@ -9,7 +9,7 @@
 
   it follows the **complete binary tree** structure.
   
-  all nodes have two children,except the last level and last level is as left as possible.
+  all nodes have two children,except the last level and last level is as left as possible.(completeness)
   
 this is all about a basic info.
 
