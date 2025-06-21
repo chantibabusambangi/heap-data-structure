@@ -32,5 +32,5 @@
   this ≈2^(h+1)≈n
   therefore TC=O(n)
 ✅ Hope this was helpful!
-Feel free to open an issue or PR if you spot any improvements.
+feel free to open an issue or PR if you spot any improvements.
 ⭐️ Star the repo if you find it useful!
